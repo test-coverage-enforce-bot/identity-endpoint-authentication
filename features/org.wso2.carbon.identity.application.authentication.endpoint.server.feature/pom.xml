@@ -113,6 +113,11 @@
                         <configuration>
                             <id>org.wso2.carbon.identity.application.authentication.endpoint.server</id>
                             <propertiesFile>../../etc/feature.properties</propertiesFile>
+                            <adviceFile>
+                                <properties>
+                                    <propertyDef>org.wso2.carbon.p2.category.type:server</propertyDef>
+                                </properties>
+                            </adviceFile>
                             <bundles>
                                 <bundleDef>
                                     org.wso2.carbon.identity.endpoint.authentication:org.wso2.carbon.identity.application.authentication.endpoint.util
