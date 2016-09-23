@@ -26,7 +26,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>org.wso2.carbon.identity.application.authentication.framework.server.feature</artifactId>
+    <artifactId>org.wso2.carbon.identity.application.authentication.endpoint.server.feature</artifactId>
     <packaging>pom</packaging>
     <name>Application Authentication Framework Server Feature</name>
     <url>http://wso2.org</url>
@@ -34,10 +34,6 @@
     </description>
 
     <dependencies>
-        <dependency>
-            <groupId>org.wso2.carbon.identity.framework</groupId>
-            <artifactId>org.wso2.carbon.identity.application.authentication.framework</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.endpoint.authentication</groupId>
             <artifactId>org.wso2.carbon.identity.application.authentication.endpoint.util</artifactId>
@@ -115,11 +111,11 @@
                             <goal>p2-feature-gen</goal>
                         </goals>
                         <configuration>
-                            <id>org.wso2.carbon.identity.application.authentication.framework.server</id>
+                            <id>org.wso2.carbon.identity.application.authentication.endpoint.server</id>
                             <propertiesFile>../../etc/feature.properties</propertiesFile>
                             <bundles>
                                 <bundleDef>
-                                    org.wso2.carbon.identity.framework:org.wso2.carbon.identity.application.authentication.endpoint.util
+                                    org.wso2.carbon.identity.endpoint.authentication:org.wso2.carbon.identity.application.authentication.endpoint.util
                                 </bundleDef>
                             </bundles>
                             <importFeatures>

@@ -126,13 +126,6 @@
             <!-- Carbon Kernel Dependencies-->
 
             <dependency>
-                <groupId>org.wso2.carbon.identity.account.mgt.endpoint</groupId>
-                <artifactId>org.wso2.carbon.identity.mgt.endpoint</artifactId>
-                <version>${identity.account.mgt.endpoint.version}</version>
-                <type>war</type>
-            </dependency>
-
-            <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
@@ -201,9 +194,15 @@
             </dependency>
 
             <dependency>
-                <groupId>org.wso2.carbon.identity.framework</groupId>
+                <groupId>org.wso2.carbon.identity.endpoint.authentication</groupId>
                 <artifactId>org.wso2.carbon.identity.application.authentication.endpoint.util</artifactId>
                 <version>${identity.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.endpoint.authentication</groupId>
+                <artifactId>org.wso2.carbon.identity.application.authentication.endpoint</artifactId>
+                <version>${identity.framework.version}</version>
+                <type>war</type>
             </dependency>
             <dependency>
                 <groupId>org.wso2.securevault</groupId>
@@ -321,7 +320,14 @@
         <encoder.wso2.version>1.2.0.wso2v1</encoder.wso2.version>
         <jersey-version>1.19.1</jersey-version>
         <commons-codec.version>1.4.0.wso2v1</commons-codec.version>
-
+        <carbon.commons.version>4.5.2</carbon.commons.version>
+        <carbon.identity.package.export.version>${identity.framework.version}</carbon.identity.package.export.version>
+        <carbon.identity.package.import.version.range>[5.0.0, 6.0.0)</carbon.identity.package.import.version.range>
+        <imp.pkg.version.javax.servlet>[2.6.0, 3.0.0)</imp.pkg.version.javax.servlet>
+        <axiom.osgi.version.range>[1.2.11, 2.0.0)</axiom.osgi.version.range>
+        <commons-lang.wso2.osgi.version.range>[2.6.0,3.0.0)</commons-lang.wso2.osgi.version.range>
+        <commons-logging.osgi.version.range>[1.2,2.0)</commons-logging.osgi.version.range>
+        <axis2.osgi.version.range>[1.6.1.wso2v12, 2.0.0)</axis2.osgi.version.range>
 
     </properties>
 
